@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat App</title>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/chat.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/chat.css">
+
+</head>
+<body>
+
+    <div id="fetchUserName">
+        <span id="errSpan" class="noError">Please enter User Name to proceed</span>
+        <div>
+            <span>Enter username</span>
+            <input type="text" id="txtUserName" />
+            <button onClick="getUserName()">Submit</button>
+        </div>
+    </div>
+
+    <div id="chatArea" class="none">
+        <div>
+            <h3 id="userName"></h3>
+            <textarea rows="30" cols="60" id="chatTextArea" ></textarea>
+            <textarea rows="30" cols="60" id="privateChatTextArea" class="privateChat privateElement none">PRIVATE CHAT(Chatting with person shown in dropdown)</textarea>
+        </div>
+        <input type="text" id="txtChatMsg" class="txtChat" placeholder="Enter public chat here" />
+        <button class="sendChatBtn" onClick="sendMessage()">Send</button>
+        <input type="text" id="txtPrivateChatMsg" class="txtChat privateChat privateElement none" placeholder="Enter private chat here" />
+        <button class="sendChatBtn privateElement none" onClick="sendPrivateMessage()">Send</button>
+        <br />
+        <br />
+        <span>Available online friends : </span>
+        <select id="onlineFriendsDDL" onChange="chatPrivately()">
+            <option value="None" selected="selected">None</option>
+        </select>
+    </div>
+
+</body>
+</html>

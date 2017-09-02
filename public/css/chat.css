@@ -1,0 +1,25 @@
+.error{
+    color: red;
+    display: block;
+}
+
+.noError{
+    color: red;
+    display: none;
+}
+
+.none{
+    display: none;
+}
+
+.txtChat{
+    width: 400px;
+}
+
+.sendChatBtn{
+    width: 92px;
+}
+
+.privateChat{
+    margin-left: 100px;
+}
